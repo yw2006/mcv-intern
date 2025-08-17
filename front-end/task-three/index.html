@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="">
+    <label for="name">Full Name: </label>
+    <br>
+    <input type="text" required placeholder="Full Name:" name="name" id="name">
+    <br>
+    <br>
+    <label for="email">Email Address: </label>
+    <br>
+    <input type="email" required placeholder="example@mail.com" name="email" id="email">
+    <br>
+    <br>
+    <label for="phone">Phone Number: </label>
+    <br>
+    <input type="number" required placeholder="01231456825" name="phone" id="phone">
+    <br>
+<p>Preferred Contact Method: </p>
+<label for="email_contact">email: </label>
+<input type="radio" name="contact" id="email_contact" value="Email">
+<label for="phone_contact">Phone Number: </label>
+<input type="radio" name="contact" id="phone_contact" value="Email">
+<br>
+<p>Services intersted In:</p>
+<input type="checkbox" name="web" id="web" value="web">
+<label for="web">Web Design</label>
+<input type="checkbox" name="seo" id="seo" value="seo">
+<label for="seo">SEO</label>
+<input type="checkbox" name="hosting" id="hosting" value="hosting">
+<label for="hosting">Hosting</label>
+<br>
+<br>
+<label for="cities">City:</label>
+<select name="cities" id="cities" >
+    <option value="cairo">cairo</option>
+    <option value="alex">alex</option>
+    <option value="aswan">aswan</option>
+</select>
+<br>
+<br>
+<label for="message">Your Message:</label>
+<br>
+<textarea name="message" id="message" placeholder="Write your message here...." style="width: 200px; height: 100px;"></textarea>
+<br>
+<br>
+<button type="submit" >Submit</button>
+</form>
+</body>
+</html>
