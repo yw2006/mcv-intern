@@ -1,0 +1,17 @@
+.box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  position: relative; 
+  text-align: center;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 50px; 
+  height: 2px; 
+  top: -2px; 
+  left: 150px;
+}
