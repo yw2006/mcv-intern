@@ -1,0 +1,28 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    animation-name:  box-circle;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes box-circle {
+    0%{
+    transform: rotate(0deg);
+    border-radius: 0px 0px 0px 0px;
+    }
+    25%{
+    transform: rotate(-45deg);
+    border-radius: 0px 0px 100px 0px;
+    }
+    50%{
+    transform: rotate(-90deg);
+    border-radius: 0px 100px 100px 0px;
+    }
+    100%{
+    transform: rotate(-135deg);
+    border-radius: 100px 100px 100px 100px;
+    }
+}

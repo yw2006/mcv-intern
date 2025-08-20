@@ -1,0 +1,74 @@
+    body {
+      margin: 0;
+      height: 100vh; /* full screen height */
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;    /* vertical center */
+      background: #0b0a0a;
+    }
+
+    .box {
+      width: 200px;
+      height: 150px;
+      background:#0b0a0a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: solid white 1px;
+      position: relative;
+    }
+    .love{
+        position: absolute;
+        top: 20px;
+        animation-name: love;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    .mice{
+        position: absolute;
+        bottom: 20px;
+        animation-name: mice;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+
+    }
+    .like{
+        position: absolute;
+        top: 45%;
+        bottom: 50%;
+        animation-name: like;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes love {
+        from{
+            left:10px
+        }
+        to{
+            left: 90%;
+        }
+    }
+     @keyframes like {
+        from{
+            top:10px
+        }
+        to{
+            top: 85%;
+        }
+    }
+    @keyframes mice {
+        from{
+            right:10px
+        }
+        to{
+            right: 90%;
+        }
+    }
