@@ -1,0 +1,49 @@
+body{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+}
+.btn{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: medium;
+    transition:  transform .5s ease;
+    background-color: greenyellow;
+    position: absolute;
+    top:350px;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(148, 209, 57);
+}
+.rocket{
+    width:100px;
+    height:100px;
+    position: absolute;
+    top: 240px;
+}
+.animation{
+
+    animation-name:top_trans ;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+@keyframes top_trans {
+    0%{
+        top: 240px;
+    }
+    100%{
+        top:0px;
+    }
+}
