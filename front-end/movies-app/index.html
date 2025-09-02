@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="floating-particles" id="particles"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1>Fav Films</h1>
+            <p>Discover your next favorite movie</p>
+        </header>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Movies</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+            <button class="filter-btn" data-filter="adventure">Adventure</button>
+            <button class="filter-btn" data-filter="animation">Animation</button>
+            <button class="filter-btn" data-filter="drama">Drama</button>
+            <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+            <button class="filter-btn" data-filter="comedy">Comedy</button>
+            <button class="other_rec" id="other_rec">other Recommendations</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading movies...</p>
+        </div>
+
+        <div class="movies-grid" id="moviesGrid"></div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
