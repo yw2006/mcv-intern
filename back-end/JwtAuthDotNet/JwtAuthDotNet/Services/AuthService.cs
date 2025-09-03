@@ -72,16 +72,24 @@ namespace JwtAuthDotNet.Services
             return user;
 
         }
-        private string GnerateRefreshToken()
+        private async Task<string> GnerateRefreshToken()
         {
-            var randomNumber = new byte[32];
-            using var rng = RandomNumberGenerator.Create();
-            rng.GetBytes(randomNumber);
-            return Convert.ToBase64String(randomNumber);
+            string token;
+            do
+            {
+                var randomNumber = new byte[32];
+                using var rng = RandomNumberGenerator.Create();
+                rng.GetBytes(randomNumber);
+                token = Convert.ToBase64String(randomNumber);
+            }
+            while (await context.Users.AnyAsync(u => u.RefreshToken == token));
+
+            return token;
         }
+
         private async Task<string> GnerateAndSaveRefreshToken(User user)
         {
-            var refreshToken = GnerateRefreshToken();
+            var refreshToken = await GnerateRefreshToken();
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
             await context.SaveChangesAsync();
